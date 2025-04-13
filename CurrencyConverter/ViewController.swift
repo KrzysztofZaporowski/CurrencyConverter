@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
     private let currencies = ["PLN", "USD", "EUR", "GBP", "CHF"]
     private var rates = [String:Double]()
     private var from=0, to=0
@@ -19,10 +20,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func textChanged(_ sender: Any) {
         convertValue()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        textField.endEditing(true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -71,6 +68,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         } else {
             labelOutput.text = "Wprowadź prawidłową kwotę"
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textField.endEditing(true)
     }
     
     override func viewDidLoad() {

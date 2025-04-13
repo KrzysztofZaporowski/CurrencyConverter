@@ -16,14 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wprowadź kwotę do przeliczenia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2X-dP-rWo">
-                                <rect key="frame" x="16" y="76" width="361" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="YBj-v4-kdx"/>
-                                </connections>
-                            </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uvl-jj-v7k">
                                 <rect key="frame" x="0.0" y="634" width="393" height="162"/>
                                 <constraints>
@@ -34,9 +26,19 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="7Ch-kf-x2L"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kwota w PLN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2w-cS-GwW">
-                                <rect key="frame" x="93" y="128" width="206" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Wprowadź kwotę do przeliczenia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2X-dP-rWo">
+                                <rect key="frame" x="31" y="220" width="331" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="uIe-0m-uir"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="YBj-v4-kdx"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kwota w PLN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2w-cS-GwW">
+                                <rect key="frame" x="146.66666666666666" y="276" width="99.666666666666657" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,10 +47,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="g2X-dP-rWo" firstAttribute="centerX" secondItem="W2w-cS-GwW" secondAttribute="centerX" id="Jhg-fY-Ez9"/>
                             <constraint firstItem="uvl-jj-v7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PJU-Cl-klS"/>
                             <constraint firstAttribute="bottomMargin" secondItem="uvl-jj-v7k" secondAttribute="bottom" constant="-12" id="U2A-A4-MCA"/>
+                            <constraint firstItem="g2X-dP-rWo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="102" id="WTa-Lt-smH"/>
                             <constraint firstItem="uvl-jj-v7k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wo1-Bh-zVi"/>
                             <constraint firstItem="uvl-jj-v7k" firstAttribute="centerX" secondItem="g2X-dP-rWo" secondAttribute="centerX" id="l3X-lP-8yU"/>
+                            <constraint firstItem="W2w-cS-GwW" firstAttribute="top" secondItem="g2X-dP-rWo" secondAttribute="bottom" constant="22" id="mDl-qD-bjP"/>
+                            <constraint firstItem="g2X-dP-rWo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="zOD-uU-xs7"/>
                         </constraints>
                     </view>
                     <connections>
